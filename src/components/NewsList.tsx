@@ -11,7 +11,7 @@ export const NewsList = () => {
       'https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=cEWFEXyy9FAG4sCXACpPK4XYRp44Uenr',
     );
     const data = await res.json();
-    console.log(data.results);
+    console.log(data.results)
     return data.results;
   };
 
@@ -22,6 +22,8 @@ export const NewsList = () => {
       published_date={item.published_date}
       section={item.section}
       author={item.byline}
+      url={item.url}
+      // src={item.uri}
     />
   );
 
