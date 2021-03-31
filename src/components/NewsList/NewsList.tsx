@@ -2,20 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { FlatList, ListRenderItem, Text, View } from 'react-native';
 
 import { NewsItem } from '../NewsCard/NewsCard';
-import { TNewsList } from './NewsListTypes';
+import { NewsListTypes } from './types';
+import { getNewsList } from '../../store/service';
 
 export const NewsList = () => {
   const [list, setList] = useState([]);
 
-  const getNewsList = async () => {
-    const res = await fetch(
-      'https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=cEWFEXyy9FAG4sCXACpPK4XYRp44Uenr',
-    );
-    const data = await res.json();
-    return data.results;
-  };
-
-  const renderItems: ListRenderItem<TNewsList> = ({ item }) => {
+  const renderItems: ListRenderItem<NewsListTypes> = ({ item }) => {
     const isMedia =
       Object.values(item.media).length > 0 && Object.values(item.media[0])[5];
 

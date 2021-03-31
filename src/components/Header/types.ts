@@ -1,5 +1,5 @@
 import { TextStyle } from "react-native";
 
-export type THeaderStyles = {
+export type HeaderStylesTypes = {
   header: TextStyle;
 }

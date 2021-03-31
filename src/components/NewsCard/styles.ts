@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
-import { TNewsCardStyles } from './NewsCardTypes';
+import { NewsCardStylesTypes } from './types';
 
-export const styles = StyleSheet.create<TNewsCardStyles>({
+export const styles = StyleSheet.create<NewsCardStylesTypes>({
   container: {
     paddingBottom: 15,
   },

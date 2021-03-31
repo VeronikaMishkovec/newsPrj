@@ -1,4 +1,4 @@
-export type TNewsList = {
+export type NewsListTypes = {
   title: string,
   abstract: string,
   published_date: string,

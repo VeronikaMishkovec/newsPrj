@@ -1,7 +1,6 @@
 import React, { FC, useCallback } from 'react';
 import {
   Alert,
-  Button,
   ImageBackground,
   Linking,
   Text,
@@ -10,10 +9,10 @@ import {
 } from 'react-native';
 import momemt from 'moment';
 
-import { TNewsCard } from './NewsCardTypes';
-import { styles } from './NewsCardStyles';
+import { NewsCardTypes } from './types';
+import { styles } from './styles';
 
-export const NewsItem: FC<TNewsCard> = props => {
+export const NewsItem: FC<NewsCardTypes> = (props) => {
   const { title, src, subtitle, published_date, section, author, url } = props;
 
   const date = momemt(published_date).format('DD.MM.YYYY');
@@ -23,7 +22,7 @@ export const NewsItem: FC<TNewsCard> = props => {
       // Checking if the link is supported for links with custom URL scheme.
       const supported = await Linking.canOpenURL(url);
 
-      if (supported) {
+      if ((supported)) {
         // Opening the link with some app, if the URL scheme is "http" the web link should be opened
         // by some browser in the mobile
         await Linking.openURL(url);
@@ -32,7 +31,6 @@ export const NewsItem: FC<TNewsCard> = props => {
       }
     }, [url]);
 
-    // return <Button color="#3d6c6f" title={children} onPress={handlePress} />;
     return (
       <TouchableOpacity style={styles.button} onPress={handlePress}>
         <Text style={styles.buttonText}>{children}</Text>

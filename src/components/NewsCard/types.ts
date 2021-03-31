@@ -1,16 +1,17 @@
 import { TextStyle } from 'react-native';
 
-export type TNewsCard = {
+export type NewsCardTypes = {
   title: string;
-  src?: string;
   subtitle: string;
   published_date: string;
   section: string;
   author: string;
   url: string;
+
+  src?: string;
 };
 
-export type TNewsCardStyles = {
+export type NewsCardStylesTypes = {
   container: TextStyle;
   textContainer: TextStyle;
   title: TextStyle;

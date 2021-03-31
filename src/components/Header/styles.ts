@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
-import { THeaderStyles } from './HeaderTypes';
+import { HeaderStylesTypes } from './types';
 
-export const styles = StyleSheet.create<THeaderStyles>({
+export const styles = StyleSheet.create<HeaderStylesTypes>({
   header: {
     fontSize: 18,
     fontWeight: 'bold',
