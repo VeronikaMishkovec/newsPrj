@@ -6,7 +6,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import createSagaMiddleware from 'redux-saga';
 
 import { Header } from './src/components/Header';
-import { NewsList } from './src/components/NewsList/NewsList';
+import { NewsList } from './src/components/NewsList';
 import { rootReducer } from './src/store/reducers/rootReducer';
 import rootSaga from './src/store/saga/rootSaga';
 
