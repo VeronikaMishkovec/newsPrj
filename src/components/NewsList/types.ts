@@ -5,7 +5,7 @@ export type NewsListTypes = {
   section: string,
   byline: string,
   url: string,
-  media: any,
+  media: {},
   id: string,
 };
 

@@ -4,7 +4,12 @@ const initialState = {
   list: [],
 };
 
-export const newsList = (state = initialState, action: any) => {
+type ActionType = {
+  type: string;
+  payload: [];
+};
+
+export const newsList = (state = initialState, action: ActionType) => {
   switch (action.type) {
     case GET_NEWS_LIST:
       return { ...state };
