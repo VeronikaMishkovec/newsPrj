@@ -5,7 +5,9 @@ export const getNewsList = () => ({
   type: GET_NEWS_LIST,
 });
 
-export const setNewsList = (list: {}) => ({
-  type: SET_NEWS_LIST,
-  list,
-});
+export const setNewsList = (list: {}) => {
+  return {
+    type: SET_NEWS_LIST,
+    list,
+  };
+};

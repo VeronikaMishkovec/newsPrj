@@ -9,7 +9,7 @@ import { NewsListTypes } from './types';
 export const NewsList = () => {
   const [list, setList] = useState([]);
   const dispatch = useDispatch();
-  const newsList = useSelector(state => console.log(state))
+  const newsList = useSelector(state => state.newsList.list);
 
   const renderItems: ListRenderItem<NewsListTypes> = ({ item }) => {
     const isMedia =
@@ -38,7 +38,7 @@ export const NewsList = () => {
 
   return (
     <FlatList
-      data={list}
+      data={newsList}
       renderItem={renderItems}
       keyExtractor={item => item.id}
       initialNumToRender={3}

@@ -9,7 +9,7 @@ export const newsList = (state = initialState, action: any) => {
     case GET_NEWS_LIST:
       return { ...state };
     case SET_NEWS_LIST:
-      return { ...state, list: action.list };
+      return { ...state, list: action.payload };
     default:
       return { ...state };
   }
