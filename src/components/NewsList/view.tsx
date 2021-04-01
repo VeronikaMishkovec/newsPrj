@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import { FlatList, ListRenderItem } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
-import { getNewsList } from '../../store/actions/action';
 import { NewsCard } from '../NewsCard';
+import { NewsListTypes, NewsListViewTypes } from './types';
 
-import { NewsListTypes } from './types';
-
-export const NewsList = () => {
-  const [list, setList] = useState([]);
-  const dispatch = useDispatch();
-  const newsList = useSelector(state => state.newsList.list);
+export const NewsListView: FC<NewsListViewTypes> = props => {
+  const { data } = props;
 
   const renderItems: ListRenderItem<NewsListTypes> = ({ item }) => {
     const isMedia =
@@ -31,17 +26,11 @@ export const NewsList = () => {
       />
     );
   };
-
-  useEffect(() => {
-    dispatch(getNewsList());
-  }, []);
-
   return (
     <FlatList
-      data={newsList}
+      data={data}
       renderItem={renderItems}
       keyExtractor={item => item.id}
-      initialNumToRender={3}
     />
   );
 };
