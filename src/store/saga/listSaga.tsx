@@ -5,6 +5,7 @@ import { GET_NEWS_LIST, SET_NEWS_LIST } from '../actions/action';
 function* newsList() {
   const payload: {} = yield call(getNewsList);
   const res: {} = yield put({ type: SET_NEWS_LIST, payload });
+  console.log(res)
   return res
 }
 

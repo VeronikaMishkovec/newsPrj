@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { FlatList, ListRenderItem, Text, View } from 'react-native';
+import { FlatList, ListRenderItem } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
+import { getNewsList } from '../../store/actions/action';
+import { NewsCard } from '../NewsCard';
 
-import { NewsItem } from '../NewsCard/NewsCard';
 import { NewsListTypes } from './types';
-import { getNewsList } from '../../store/service';
 
 export const NewsList = () => {
   const [list, setList] = useState([]);
+  const dispatch = useDispatch();
+  const newsList = useSelector(state => console.log(state))
 
   const renderItems: ListRenderItem<NewsListTypes> = ({ item }) => {
     const isMedia =
@@ -17,7 +20,7 @@ export const NewsList = () => {
       : 'https://cdn.pixabay.com/photo/2017/02/16/19/47/bokeh-2072271__340.jpg';
 
     return (
-      <NewsItem
+      <NewsCard
         title={item.title}
         subtitle={item.abstract}
         published_date={item.published_date}
@@ -30,7 +33,7 @@ export const NewsList = () => {
   };
 
   useEffect(() => {
-    getNewsList().then(res => setList(res));
+    dispatch(getNewsList());
   }, []);
 
   return (
