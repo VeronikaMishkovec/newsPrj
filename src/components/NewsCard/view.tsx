@@ -1,28 +1,25 @@
 import React, { FC, useCallback } from 'react';
 import {
+  Linking,
   Alert,
   ImageBackground,
-  Linking,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
-import momemt from 'moment';
 
-import { NewsCardTypes } from './types';
 import { styles } from './styles';
+import { NewsCardTypes } from './types';
 
-export const NewsItem: FC<NewsCardTypes> = (props) => {
+export const NewsCardView: FC<NewsCardTypes> = props => {
   const { title, src, subtitle, published_date, section, author, url } = props;
-
-  const date = momemt(published_date).format('DD.MM.YYYY');
 
   const OpenURLButton = ({ url, children }: any) => {
     const handlePress = useCallback(async () => {
       // Checking if the link is supported for links with custom URL scheme.
       const supported = await Linking.canOpenURL(url);
 
-      if ((supported)) {
+      if (supported) {
         // Opening the link with some app, if the URL scheme is "http" the web link should be opened
         // by some browser in the mobile
         await Linking.openURL(url);
@@ -46,7 +43,7 @@ export const NewsItem: FC<NewsCardTypes> = (props) => {
       <View style={styles.textContainer}>
         <Text style={styles.subtitle}>{subtitle}</Text>
         <View style={styles.info}>
-          <Text style={styles.text}>{date}</Text>
+          <Text style={styles.text}>{published_date}</Text>
           <Text style={styles.text}>{section}</Text>
         </View>
         <Text style={styles.text}>{author}</Text>

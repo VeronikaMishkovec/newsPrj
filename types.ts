@@ -1,5 +1,5 @@
 import { TextStyle } from "react-native";
 
-export type TAppStyles = {
+export type AppStylesTypes = {
   container: TextStyle;
 }

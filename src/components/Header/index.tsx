@@ -2,10 +2,9 @@ import React, { FC } from 'react';
 import { Text } from 'react-native';
 
 import { styles } from './styles';
+import { HeaderView } from './view';
 
 export const Header: FC = () => {
-  return <Text style={styles.header}>{'Most Popular News'}</Text>;
+  // sdffsdsdsdf
+  return <HeaderView />;
 };
-
-
-
