@@ -21,4 +21,4 @@ export type List = {
   geo_facet: [];
   media: [];
   eta_id: number;
-}
+};

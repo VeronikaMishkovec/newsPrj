@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import moment from 'moment';
 
 import { NewsCardTypes } from './types';
-import { NewsCardView } from './view';
+import { NewsCardView } from './NewsCardView';
 
 export const NewsCard: FC<NewsCardTypes> = props => {
   const { title, src, subtitle, published_date, section, author, url } = props;

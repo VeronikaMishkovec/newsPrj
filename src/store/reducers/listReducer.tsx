@@ -1,15 +1,11 @@
 import { GET_NEWS_LIST, SET_NEWS_LIST } from '../actions/action';
+import { List } from '../type';
 
 const initialState = {
   list: [],
 };
 
-type ActionType = {
-  type: string;
-  payload: [];
-};
-
-export const newsList = (state = initialState, action: ActionType) => {
+export const newsList = (state = initialState, action: { type: string; payload: List[]; }) => {
   switch (action.type) {
     case GET_NEWS_LIST:
       return { ...state };
