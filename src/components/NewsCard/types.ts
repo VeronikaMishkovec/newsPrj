@@ -19,6 +19,4 @@ export type NewsCardStylesTypes = {
   info: TextStyle;
   text: TextStyle;
   image: TextStyle;
-  button: TextStyle;
-  buttonText: TextStyle;
 };

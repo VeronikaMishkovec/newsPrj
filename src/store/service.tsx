@@ -2,10 +2,10 @@ import axios, { AxiosResponse } from 'axios';
 import { List } from './type';
 
 type Data = {
-  status: string;
   copyright: string;
   num_results: number;
   results: List[];
+  status: string;
 };
 
 export const getNewsList = () => {

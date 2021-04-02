@@ -37,19 +37,9 @@ export const styles = StyleSheet.create<NewsCardStylesTypes>({
   },
   image: {
     flex: 1,
-    resizeMode: 'cover',
-    justifyContent: 'flex-end',
     height: 200,
+    justifyContent: 'flex-end',
+    resizeMode: 'cover',
   },
-  button: {
-    backgroundColor: '#72a2ac',
-    paddingVertical: 10,
-    borderRadius: 10,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: '#fff',
-    fontWeight: 'bold',
-    fontSize: 18,
-  },
+  
 });

@@ -26,6 +26,7 @@ export const NewsListView: FC<NewsListViewTypes> = props => {
       />
     );
   };
+
   return (
     <FlatList
       data={data}
