@@ -1,5 +1,14 @@
 export const BORDER_RADIUS = 10;
-export const PADDING = 10;
+
+export const COLOR = {
+  BTN: '#72a2ac',
+  IMAGE: '#cb9573',
+  LIGHT_TEXT: '#FFF',
+  TEXT_BG: 'rgba(0, 0, 0, 0.4)',
+};
+
+export const CONTAINER_BOTTOM = 25;
+
 export const CONTAINER_PADDING = 15;
 
 export const FONT = {
@@ -21,9 +30,4 @@ export const FONT_SIZE = {
 export const MARGINS = {
   HEADER: 15,
 };
-
-export const COLOR = {
-  BTN: '#72a2ac',
-  LIGHT_TEXT: '#FFF',
-  TEXT_BG: 'rgba(0, 0, 0, 0.4)'
-};
+export const PADDING = 10;

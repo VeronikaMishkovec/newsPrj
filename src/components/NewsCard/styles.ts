@@ -12,6 +12,28 @@ export const styles = StyleSheet.create<NewsCardStylesTypes>({
   container: {
     paddingBottom: CONTAINER_PADDING,
   },
+  image: {
+    backgroundColor: COLOR.IMAGE,
+    flex: 1,
+    height: 200,
+    justifyContent: 'flex-end',
+    resizeMode: 'cover',
+  },
+  info: {
+    flexDirection: 'row',
+    fontSize: FONT_SIZE.OPTION_INFO,
+    justifyContent: 'space-between',
+  },
+  subtitle: {
+    fontFamily: FONT.REGULAR,
+    fontSize: FONT_SIZE.TEXT,
+    marginBottom: PADDING,
+  },
+  text: {
+    color: COLOR.BTN,
+    fontFamily: FONT.REGULAR,
+    marginBottom: PADDING,
+  },
   textContainer: {
     paddingHorizontal: PADDING,
     paddingVertical: CONTAINER_PADDING,
@@ -24,26 +46,5 @@ export const styles = StyleSheet.create<NewsCardStylesTypes>({
     fontSize: FONT_SIZE.TITLE,
     paddingHorizontal: PADDING,
     paddingVertical: CONTAINER_PADDING,
-  },
-  subtitle: {
-    fontFamily: FONT.REGULAR,
-    fontSize: FONT_SIZE.TEXT,
-    marginBottom: PADDING,
-  },
-  info: {
-    flexDirection: 'row',
-    fontSize: FONT_SIZE.OPTION_INFO,
-    justifyContent: 'space-between',
-  },
-  text: {
-    color: COLOR.BTN,
-    fontFamily: FONT.REGULAR,
-    marginBottom: PADDING,
-  },
-  image: {
-    flex: 1,
-    height: 200,
-    justifyContent: 'flex-end',
-    resizeMode: 'cover',
   },
 });

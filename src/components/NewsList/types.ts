@@ -1,9 +1,3 @@
-export type RootState = {
-  newsList: {
-    list: [];
-  };
-};
-
 export type NewsListTypes = {
   title: string;
   abstract: string;
@@ -21,4 +15,10 @@ export type NewsListTypes = {
 
 export type NewsListViewTypes = {
   data: NewsListTypes[];
+};
+
+export type RootState = {
+  newsList: {
+    list: [];
+  };
 };

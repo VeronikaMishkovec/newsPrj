@@ -5,7 +5,7 @@ import { styles } from './styles';
 import { LinkViewTypes } from './types';
 
 export const LinkView: FC<LinkViewTypes> = props => {
-  const { handlePress, children } = props;
+  const { children, handlePress } = props;
   return (
     <TouchableOpacity style={styles.button} onPress={handlePress}>
       <Text style={styles.buttonText}>{children}</Text>
