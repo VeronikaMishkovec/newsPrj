@@ -1,3 +1,9 @@
+export type RootState = {
+  newsList: {
+    list: []
+  }
+}
+
 export type NewsListTypes = {
   title: string,
   abstract: string,

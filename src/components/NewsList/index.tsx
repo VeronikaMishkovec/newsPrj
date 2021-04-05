@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getNewsList } from '../../store/actions/action';
-import { rootReducer } from '../../store/reducers/rootReducer';
-import { List } from '../../store/type';
 
 import { NewsListView } from './NewsListView';
+import { RootState } from './types';
 
 export const NewsList = () => {
   const dispatch = useDispatch();
-  // use root state types
-  const newsList = useSelector((state: typeof rootReducer) => state.newsList.list);
+
+  const newsList = useSelector((state: RootState) => state.newsList.list);
 
   useEffect(() => {
     dispatch(getNewsList());

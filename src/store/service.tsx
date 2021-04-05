@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import { List } from './type';
 
 type Data = {
@@ -8,11 +8,7 @@ type Data = {
   status: string;
 };
 
-export const getNewsList = () => {
-  const apiURL =
-    'https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=cEWFEXyy9FAG4sCXACpPK4XYRp44Uenr';
-  const data = axios
-    .get<Data>(apiURL)
-    .then((resp: AxiosResponse<Data>) => resp.data.results);
-  return data;
-};
+export const getNewsList = () =>
+  axios.get(
+    'https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=cEWFEXyy9FAG4sCXACpPK4XYRp44Uenr',
+  );
