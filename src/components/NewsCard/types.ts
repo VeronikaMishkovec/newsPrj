@@ -1,5 +1,15 @@
 import { TextStyle } from 'react-native';
 
+export type NewsCardStylesTypes = {
+  container: TextStyle;
+  textContainer: TextStyle;
+  title: TextStyle;
+  subtitle: TextStyle;
+  info: TextStyle;
+  text: TextStyle;
+  image: TextStyle;
+};
+
 export type NewsCardTypes = {
   title: string;
   subtitle: string;
@@ -9,14 +19,4 @@ export type NewsCardTypes = {
   url: string;
 
   src?: string;
-};
-
-export type NewsCardStylesTypes = {
-  container: TextStyle;
-  textContainer: TextStyle;
-  title: TextStyle;
-  subtitle: TextStyle;
-  info: TextStyle;
-  text: TextStyle;
-  image: TextStyle;
 };
