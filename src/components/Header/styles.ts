@@ -1,12 +1,12 @@
 import { StyleSheet } from "react-native";
+import { FONT, MARGIN_HEADER } from "../constants";
 import { HeaderStylesTypes } from './types';
 
-export const MARGIN_HEADER = 15;
 
 export const styles = StyleSheet.create<HeaderStylesTypes>({
   header: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontFamily: FONT.BOLD,
     marginBottom: MARGIN_HEADER,
     marginHorizontal: MARGIN_HEADER,
   },

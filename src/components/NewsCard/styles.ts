@@ -10,9 +10,10 @@ export const styles = StyleSheet.create<NewsCardStylesTypes>({
     paddingVertical: 15,
   },
   title: {
-    color: '#fff',
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
     borderStyle: 'solid',
-    fontWeight: 'bold',
+    color: '#fff',
+    fontFamily: 'NotoSansJP-Bold',
     fontSize: 18,
     paddingHorizontal: 10,
     paddingVertical: 15,
@@ -20,19 +21,20 @@ export const styles = StyleSheet.create<NewsCardStylesTypes>({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.8,
     shadowRadius: 2,
-    backgroundColor: 'rgba(0, 0, 0, 0.4)',
   },
   subtitle: {
+    fontFamily: 'NotoSansJP-Regular',
     fontSize: 16,
     marginBottom: 10,
   },
   info: {
-    fontSize: 12,
     flexDirection: 'row',
+    fontSize: 12,
     justifyContent: 'space-between',
   },
   text: {
     color: '#72a2ac',
+    fontFamily: 'NotoSansJP-Regular',
     marginBottom: 10,
   },
   image: {
@@ -41,5 +43,4 @@ export const styles = StyleSheet.create<NewsCardStylesTypes>({
     justifyContent: 'flex-end',
     resizeMode: 'cover',
   },
-  
 });
