@@ -1,4 +1,4 @@
-import { put, call, takeLatest } from 'redux-saga/effects';
+import { put, call, takeEvery } from 'redux-saga/effects';
 import { getNewsList } from '../service';
 import { GET_NEWS_LIST, SET_NEWS_LIST } from '../actions/action';
 import { List } from '../type';
@@ -10,5 +10,5 @@ function* newsList() {
 }
 
 export default function* newsListSaga() {
-  yield takeLatest(GET_NEWS_LIST, newsList);
+  yield takeEvery(GET_NEWS_LIST, newsList);
 }
