@@ -1,20 +1,24 @@
 export type RootState = {
   newsList: {
-    list: []
-  }
-}
+    list: [];
+  };
+};
 
 export type NewsListTypes = {
-  title: string,
-  abstract: string,
-  published_date: string,
-  section: string,
-  byline: string,
-  url: string,
-  media: {},
-  id: string,
+  title: string;
+  abstract: string;
+  published_date: string;
+  section: string;
+  byline: string;
+  url: string;
+  media: [
+    {
+      'media-metadata': [{ url: string }, { url: string }, { url: string }];
+    },
+  ];
+  id: string;
 };
 
 export type NewsListViewTypes = {
-  data: NewsListTypes[]
-}
+  data: NewsListTypes[];
+};

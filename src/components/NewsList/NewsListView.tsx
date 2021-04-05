@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { FlatList, ListRenderItem } from 'react-native';
 import { NewsCard } from '../NewsCard';
 import { NewsListTypes, NewsListViewTypes } from './types';
@@ -7,22 +7,19 @@ export const NewsListView: FC<NewsListViewTypes> = props => {
   const { data } = props;
 
   const renderItems: ListRenderItem<NewsListTypes> = ({ item }) => {
-    const isMedia =
-      Object.values(item.media).length > 0 && Object.values(item.media[0])[5];
+    const media_data = item.media[0];
 
-    const newsImage = isMedia
-      ? isMedia[2].url
-      : 'https://cdn.pixabay.com/photo/2017/02/16/19/47/bokeh-2072271__340.jpg';
+    const newsImage = media_data && media_data['media-metadata'][2].url;
 
     return (
       <NewsCard
-        title={item.title}
-        subtitle={item.abstract}
+        author={item.byline}
         published_date={item.published_date}
         section={item.section}
-        author={item.byline}
-        url={item.url}
         src={newsImage}
+        subtitle={item.abstract}
+        title={item.title}
+        url={item.url}
       />
     );
   };
@@ -30,8 +27,8 @@ export const NewsListView: FC<NewsListViewTypes> = props => {
   return (
     <FlatList
       data={data}
-      renderItem={renderItems}
       keyExtractor={item => item.id}
+      renderItem={renderItems}
     />
   );
 };

@@ -6,7 +6,7 @@ import { styles } from './styles';
 import { NewsCardTypes } from './types';
 
 export const NewsCardView: FC<NewsCardTypes> = props => {
-  const { title, src, subtitle, published_date, section, author, url } = props;
+  const { author, published_date, section, src, subtitle, title, url } = props;
 
   return (
     <View style={styles.container}>
